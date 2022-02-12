@@ -29,10 +29,10 @@ class AdsViewerScreen extends StatelessWidget {
       color: const Color(0xFF333333),
       child: Stack(
         children: [
+          const ImaContentPlatformViewPlayerWidget(),
           BackButtonWidget(
             onTap: _onTapBack,
           ),
-          const ImaContentPlatformViewPlayerWidget(),
         ],
       ),
     );

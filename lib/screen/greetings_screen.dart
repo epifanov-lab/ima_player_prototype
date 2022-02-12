@@ -40,7 +40,7 @@ class GreetingsScreen extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              margin: const EdgeInsets.only(bottom: 148),
+              margin: const EdgeInsets.only(bottom: 124),
               child: BlocBuilder<GreetingsCubit, GreetingsState>(
                 bloc: locator.get<GreetingsCubit>(),
                 builder: (context, state) {
