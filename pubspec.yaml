@@ -19,11 +19,15 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^1.0.0
-flutter:
 
+flutter:
   uses-material-design: true
+  fonts:
+    - family: Minecraft
+      fonts:
+        - asset: assets/fonts/minecraft_bold.otf
+        - asset: assets/fonts/minecraft_regular.otf
 
 
 
