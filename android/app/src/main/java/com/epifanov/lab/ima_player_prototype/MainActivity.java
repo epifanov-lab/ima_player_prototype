@@ -8,6 +8,7 @@ import androidx.multidex.MultiDex;
 
 import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.engine.FlutterEngine;
+import io.flutter.plugins.GeneratedPluginRegistrant;
 
 public class MainActivity extends FlutterActivity {
 
@@ -19,9 +20,7 @@ public class MainActivity extends FlutterActivity {
 
    @Override
    public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
-      flutterEngine
-        .getPlatformViewsController()
-        .getRegistry()
-        .registerViewFactory("ima_player_prototype.ima_content_platform_view_player", new NativeViewFactory());
+      GeneratedPluginRegistrant.registerWith(flutterEngine);
+      flutterEngine.getPlugins().add(new ImaPlayerViewPlugin());
    }
 }

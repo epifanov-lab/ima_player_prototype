@@ -17,6 +17,10 @@ class AdsViewerScreen extends StatelessWidget {
     );
   }
 
+  void _onAdEnds() {
+    locator.get<AdsViewerCubit>().onAdEnds();
+  }
+
   void _onTapBack() {
     locator.get<AdsViewerCubit>().onTapBack();
   }
@@ -29,7 +33,9 @@ class AdsViewerScreen extends StatelessWidget {
       color: const Color(0xFF333333),
       child: Stack(
         children: [
-          const ImaContentPlatformViewPlayerWidget(),
+          ImaContentPlatformViewPlayerWidget(
+            onAdEnds: _onAdEnds,
+          ),
           BackButtonWidget(
             onTap: _onTapBack,
           ),

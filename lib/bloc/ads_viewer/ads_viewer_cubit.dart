@@ -12,4 +12,8 @@ class AdsViewerCubit extends Cubit<AdsViewerState> {
     locator.get<GlobalNavigator>().pop();
   }
 
+  void onAdEnds() {
+    locator.get<GlobalNavigator>().pop();
+  }
+
 }

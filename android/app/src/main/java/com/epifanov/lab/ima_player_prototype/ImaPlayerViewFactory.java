@@ -8,9 +8,9 @@ import io.flutter.plugin.platform.PlatformView;
 import io.flutter.plugin.platform.PlatformViewFactory;
 import java.util.Map;
 
-class NativeViewFactory extends PlatformViewFactory {
+class ImaPlayerViewFactory extends PlatformViewFactory {
 
-   NativeViewFactory() {
+   ImaPlayerViewFactory() {
       super(StandardMessageCodec.INSTANCE);
    }
 
@@ -18,6 +18,6 @@ class NativeViewFactory extends PlatformViewFactory {
    @Override
    public PlatformView create(@NonNull Context context, int id, @Nullable Object args) {
       final Map<String, Object> creationParams = (Map<String, Object>) args;
-      return new NativeView(context, id, creationParams);
+      return new ImaPlayerView(context, id, creationParams);
    }
 }
